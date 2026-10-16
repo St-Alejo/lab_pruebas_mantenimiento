@@ -23,5 +23,5 @@ jobs:
         with:
           ARGS: >
             -Dsonar.organization=Steven Alejandro Ortega
-            -Dsonar.projectKey=gabxbox_lab_pruebas_mantenimiento
+            -Dsonar.projectKey=st-alejo_lab_pruebas_mantenimiento
           
