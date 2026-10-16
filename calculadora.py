@@ -9,4 +9,4 @@ def calcular_total(precio, impuesto):
     if precio > 100:
         return precio + (precio * impuesto)
     else:
-        return precio + (precio impuesto)
+        return precio + (precio * impuesto)
