@@ -1,0 +1,27 @@
+name: Quality Gate - SonarCloud
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  sonarcloud:
+    name: Análisis SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Análisis
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        with:
+          ARGS: >
+            -Dsonar.organization=Steven Alejandro Ortega
+            -Dsonar.projectKey=gabxbox_lab_pruebas_mantenimiento
+          
